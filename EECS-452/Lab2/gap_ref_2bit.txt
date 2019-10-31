@@ -1,0 +1,66 @@
+sim-safe: SimpleScalar/Alpha Tool Set version 3.0 of November, 2000.
+Copyright (c) 1994-2000 by Todd M. Austin.  All Rights Reserved.
+This version of SimpleScalar is licensed for academic non-commercial use only.
+
+warning: section `.comment' ignored...
+sim: command line: ./../../sim-safe -max:inst 100000000 gap00.peak.ev6 -l ./all -q -m 128M 
+
+sim: simulation started @ Mon Mar  4 23:52:14 2019, options follow:
+
+sim-safe: This simulator implements a functional simulator.  This
+functional simulator is the simplest, most user-friendly simulator in the
+simplescalar tool set.  Unlike sim-fast, this functional simulator checks
+for all instruction errors, and the implementation is crafted for clarity
+rather than speed.
+
+# -config                     # load configuration from a file
+# -dumpconfig                 # dump configuration to a file
+# -h                    false # print help message    
+# -v                    false # verbose operation     
+# -d                    false # enable debug message  
+# -i                    false # start in Dlite debugger
+-seed                       1 # random number generator seed (0 for timer seed)
+# -q                    false # initialize and terminate immediately
+# -chkpt               <null> # restore EIO trace execution from <fname>
+# -redir:sim           <null> # redirect simulator output to file (non-interactive only)
+# -redir:prog          <null> # redirect simulated program output to file
+-nice                       0 # simulator scheduling priority
+-max:inst           100000000 # maximum number of inst's to execute
+
+sim: ** starting functional simulation **
+warning: partially supported sigaction() call...
+warning: partially supported sigprocmask() call...
+[ 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800 ]
+30414093201713378043612608166064768844377641568960512000000000000
+[ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 ]
+[ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+17035900270730601418919867558071677342938596450600561760371485120
+[ 1, 1, 2, 5, 15, 52, 203, 877, 4140, 21147, 115975 ]
+[ 1, 1, 2, 5, 15, 52, 203, 877, 4140, 21147, 115975 ]
+976939307467007552986994066961675455550246347757474482558637
+[ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 ]
+[ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 ]
+
+sim: ** simulation statistics **
+sim_num_insn              100000000 # total number of instructions executed
+sim_num_refs               64150466 # total number of loads and stores executed
+Branch_counter              6541712 # Total number of Branches Executed
+Conditional_Branch_Counter      5733669 # Total number of Conditional Branches Executed
+2 bit predictor             5521053 #  Number of correct predictions
+sim_elapsed_time                  3 # total simulation time in seconds
+sim_inst_rate          33333333.3333 # simulation speed (in insts/sec)
+ld_text_base           0x0120000000 # program text (code) segment base
+ld_text_size                 933888 # program text (code) size in bytes
+ld_data_base           0x0140000000 # program initialized data segment base
+ld_data_size                1034176 # program init'ed `.data' and uninit'ed `.bss' size in bytes
+ld_stack_base          0x011ff9b000 # program stack segment base (highest address in stack)
+ld_stack_size                 16384 # program initial stack size
+ld_prog_entry          0x0120011a00 # program entry point (initial PC)
+ld_environ_base        0x011ff97000 # program environment base address address
+ld_target_big_endian              0 # target executable endian-ness, non-zero if big endian
+mem.page_count                16539 # total number of pages allocated
+mem.page_mem                132312k # total size of memory pages allocated
+mem.ptab_misses              101093 # total first level page table misses
+mem.ptab_accesses         330636222 # total page table accesses
+mem.ptab_miss_rate           0.0003 # first level page table miss rate
+
